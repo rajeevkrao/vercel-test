@@ -6,6 +6,7 @@ const app = express();
 //app.use(cors()); 
 //Uncomment to allow cors for all routes
 
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
