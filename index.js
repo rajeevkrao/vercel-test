@@ -1,7 +1,19 @@
 const express = require("express");
 const cors = require("cors");
+const Mongo = require("./modules/db")
+require('dotenv').config();
+
+let mongo = new Mongo();
+
+mongo.connect();
 
 const app = express();
+
+(async()=>{
+    console.log(await mongo.getnums())
+})()
+
+
 
 //app.use(cors()); 
 //Uncomment to allow cors for all routes
@@ -11,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static('public'))
+app.use(express.static('dist'))
 
 //Uncomment this section to Enable CORS
 /* app.use(function(req, res, next) {
@@ -20,7 +33,7 @@ app.use(express.static('public'))
 }); */
 
 app.get('/',(req,res)=>{
-	res.send("Hello")
+	res.sendFile('./dist/index.html')
 })
 
 app.get('/test/*',(req,res)=>{

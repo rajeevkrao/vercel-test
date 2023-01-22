@@ -19,7 +19,14 @@
   },
   "homepage": "https://github.com/rajeevkrao/vercel-test#readme",
   "dependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "axios": "^1.2.3",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongo": "^0.1.0",
+    "vite": "^4.0.4",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
   }
 }
