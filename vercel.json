@@ -1,9 +1,9 @@
 {
     "version": 2,
-    "outputDirectory":"public",
+    "outputDirectory":"dist",
     "builds": [
       {
-         "src":"public",
+         "src":"dist/**",
          "use":"@vercel/static"
       },
       {
