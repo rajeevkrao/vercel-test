@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev:backend":"nodemon index",
+    "dev:frontend":"vite",
+    "build":"vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

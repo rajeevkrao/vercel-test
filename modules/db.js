@@ -39,7 +39,7 @@ class Mongo{
 
   async getnums(){
     try{
-      return await this.client.db('fake_numbers').collection('numbers').find().toArray()
+      return await this.client.db('fake_numbers').collection('numbers').find({},{}).toArray()
     }
     catch(err){
       console.log(err)

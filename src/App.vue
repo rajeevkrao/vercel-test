@@ -1,8 +1,12 @@
 <script setup>
 import HelloWorld from './views/HelloWorld.vue'
+
+import { store } from './store';
 </script>
 
 <template>
+
+  {{ store.count }}
 <!--   <div>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />

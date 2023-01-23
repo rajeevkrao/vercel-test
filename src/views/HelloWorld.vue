@@ -8,7 +8,10 @@ defineProps({
   msg: String,
 })
 
-let a = import.meta.env.DEV
+function click(){
+  count.value++;
+  store.count++;
+}
 
 const count = ref(0)
 </script>
@@ -19,8 +22,7 @@ const count = ref(0)
   <h1>{{ store.backend_uri }}</h1>
 
   <div class="card">
-    <h1>{{ a }}</h1>
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="click()">count is {{ count }}</button>
     <p>
       Edit
       <code>views/HelloWorld.vue</code> to test HMR
