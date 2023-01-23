@@ -9,13 +9,7 @@ mongo.connect();
 
 const app = express();
 
-(async()=>{
-    console.log(await mongo.getnums())
-})()
-
-
-
-//app.use(cors()); 
+app.use(cors()); 
 //Uncomment to allow cors for all routes
 
 
@@ -34,6 +28,10 @@ app.use(express.static('dist'))
 
 app.get('/',(req,res)=>{
 	res.sendFile('./dist/index.html')
+})
+
+app.get('/api/getnums',async(req,res)=>{
+    res.json(await mongo.getnums())
 })
 
 app.get('/test/*',(req,res)=>{

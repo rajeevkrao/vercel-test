@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev:backend":"nodemon index",
-    "dev:frontend":"vite",
-    "build":"vite build",
+    "dev:backend": "nodemon index",
+    "dev:frontend": "vite",
+    "build": "vite build",
+    "vercel-build":"vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/rajeevkrao/vercel-test#readme",
   "dependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "ant-design-vue": "^3.2.15",
     "axios": "^1.2.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
