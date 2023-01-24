@@ -41,4 +41,6 @@ app.get('/test/*',(req,res)=>{
 
 
 
-app.listen(5000)
+app.listen(5000,()=>{
+    console.log("Site is Online")
+})
