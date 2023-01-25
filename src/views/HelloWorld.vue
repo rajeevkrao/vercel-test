@@ -4,6 +4,8 @@ import axios from 'axios'
 
 import { store } from '../store.js'
 
+console.log(import.meta.env.MONGO_USER)
+
 onMounted(()=>{
   axios.get(store.backend_uri+"api/getnums").then(res=>{
     console.log("axios get")
@@ -29,6 +31,8 @@ const data = ref(null)
 
 <template>
   <h1>{{ msg }}</h1>
+
+  <h1>{{ store.backend_uri }}</h1>
 
   <h3 v-for="num in data">+{{ num.cc }} {{ num.number }}</h3>
 
