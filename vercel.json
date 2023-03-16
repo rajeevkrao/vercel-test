@@ -24,6 +24,6 @@
 	],
 	"static": {
 		"public": "public",
-		"dist": "dist"
+		"dist": "dist" 
 	}
 }
