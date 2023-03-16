@@ -3,10 +3,6 @@
 	"outputDirectory":"dist",
 	"builds": [
 		{
-				"src": "public/**",
-				"use": "@vercel/static"
-		},
-		{
 				"src": "./index.js",
 				"use": "@vercel/node"
 		}
@@ -25,5 +21,9 @@
 					"src": "/(.+)",
 					"dest": "public/$1"
 			}
-	]
+	],
+	"static": {
+		"public": "public",
+		"dist": "dist"
+	}
 }
